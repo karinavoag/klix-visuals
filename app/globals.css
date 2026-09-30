@@ -1,0 +1,286 @@
+@import "tailwindcss";
+
+/* ============================================================
+   FARBEN
+   Ebene 0 Grund, Ebene 1 Inhalt, Ebene 2/3 Glas.
+   Der CTA ist die einzige gefuellte Flaeche der Seite:
+   --ink auf --ground = 16.1:1 hell, 15.4:1 dunkel.
+   Skill §16 Simplicity: Kontrast macht das Wichtigste offensichtlich.
+   Skill §16 Craft: "colors that adapt to light and dark".
+   ============================================================ */
+:root {
+  /* Grund und Text */
+  --ground: #faf8f6;
+  --surface: #ffffff;
+  --ink: #1b1f2e;
+  --ink-soft: #5a5f73;
+  --line: rgb(27 31 46 / 0.12);
+
+  /* Marke.
+     Navy ist die Strukturfarbe: 9.38:1 als Text auf dem Grund,
+     9.79:1 als Fuellung mit weissem Text. Sie traegt jede Rolle.
+     Pink traegt genau zwei Rollen: als Flaeche mit dunklem Text
+     (8.70:1) und als Text auf Navy (4.72:1). Als Text auf hellem
+     Grund kommt es auf 1.99:1 und wird deshalb nie so eingesetzt.
+
+     Die Seite hat keinen Dark Mode. Der Rollentausch der beiden
+     Markenfarben entfaellt damit, Navy traegt den CTA immer. */
+  --brand: #3a416a;
+  --on-brand: #ffffff;
+  --accent: #fe979c;
+  --on-accent: #16161a;
+
+  /* Ebene 2 Chrome */
+  --glass-chrome: rgb(250 248 246 / 0.72);
+  --glass-edge: rgb(255 255 255 / 0.55);
+  --glass-blur: 20px;
+
+  /* Ebene 3 Modal, groessere Flaeche liest dicker (§12) */
+  --glass-modal: rgb(250 248 246 / 0.82);
+  --glass-modal-blur: 32px;
+
+  --scrim: rgb(15 12 14 / 0.32);
+
+  /* Schatten skalieren mit der Flaeche (§12) */
+  --shadow-chip: 0 1px 2px rgb(27 31 46 / 0.06), 0 2px 8px rgb(27 31 46 / 0.08);
+  --shadow-card: 0 2px 4px rgb(27 31 46 / 0.04), 0 8px 24px rgb(27 31 46 / 0.10);
+  --shadow-chrome: 0 8px 32px rgb(27 31 46 / 0.10);
+  --shadow-modal: 0 24px 64px rgb(15 12 14 / 0.24);
+}
+
+@theme inline {
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-on-ink: var(--on-ink);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-on-brand: var(--on-brand);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+
+  /* ----------------------------------------------------------
+     SCHRIFT
+     Skill §15: System-Schrift zuerst, sie bringt optical sizing,
+     Tracking-Tabellen und Legibility-Tuning schon mit.
+     ---------------------------------------------------------- */
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* ----------------------------------------------------------
+     ABSTAENDE
+     4px-Basis in rem. Nur diese Werte, nichts dazwischen.
+     Skill §7 Craft, Skill §15 (rem statt px).
+     ---------------------------------------------------------- */
+  --spacing: 0.25rem;
+}
+
+/* ============================================================
+   TYPE-SKALA
+   Tracking in em, damit es proportional mitskaliert.
+   Leading unitless. Beide laufen gegenlaeufig zur Groesse.
+   Skill §15: "Tracking is size-specific, never one value for all
+   sizes" und "Leading tracks size inversely".
+   ============================================================ */
+@utility type-display {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+  font-weight: 500;
+}
+@utility type-h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+  font-weight: 500;
+}
+@utility type-h3 {
+  font-size: clamp(1.375rem, 2vw, 1.75rem);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-weight: 500;
+}
+@utility type-lead {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  letter-spacing: -0.005em;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@utility type-body {
+  font-size: 1rem;
+  letter-spacing: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+@utility type-small {
+  font-size: 0.875rem;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@utility type-micro {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* Vibrancy: ueber Glas hoeherer Kontrast, etwas mehr Gewicht,
+   kleiner Tracking-Aufschlag. Skill §12. */
+@utility on-glass {
+  font-weight: 500;
+  letter-spacing: 0.005em;
+}
+
+/* ============================================================
+   MATERIAL
+   ============================================================ */
+@utility glass-chrome {
+  background-color: var(--glass-chrome);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border-top: 1px solid var(--glass-edge);
+}
+@utility glass-modal {
+  background-color: var(--glass-modal);
+  -webkit-backdrop-filter: blur(var(--glass-modal-blur)) saturate(180%);
+  backdrop-filter: blur(var(--glass-modal-blur)) saturate(180%);
+  border-top: 1px solid var(--glass-edge);
+}
+
+/* Logos als Maske statt als Bild: die SVGs haben ihr Navy fest
+   verdrahtet und waeren auf dunklem Grund unsichtbar. Als
+   mask-image nehmen sie currentColor an und folgen dem Theme. */
+@utility logo-mask {
+  -webkit-mask-image: var(--logo-src);
+  mask-image: var(--logo-src);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  background-color: currentColor;
+}
+
+/* Der Header wechselt beim Verlassen des Hero von hell auf dunkel.
+   Das ist die einzige Stelle der Seite, an der eine CSS-Transition
+   laeuft statt eines Springs: Farbe ist weder transform noch opacity
+   und laesst sich nicht ueber eine der beiden abbilden, ohne das
+   Markup zu verdoppeln. Keine Geste beteiligt, kein Layout betroffen.
+   Bei prefers-reduced-motion wird sie weiter unten stillgelegt. */
+@utility header-tint {
+  transition: color 200ms ease-out;
+}
+
+/* ============================================================
+   BASIS
+   ============================================================ */
+@layer base {
+  html {
+    /* Die Seite laeuft ausschliesslich hell. Ohne diese Zeile faerbt
+       das System Formularfelder und Scrollbalken trotzdem dunkel. */
+    color-scheme: light;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    /* Sprungziele landen nicht unter der Chrome-Ebene */
+    scroll-padding-top: 6rem;
+  }
+
+  body {
+    background-color: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-optical-sizing: auto;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+  }
+
+  /* Fokus ist sichtbar, immer, auf jeder Flaeche */
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--ink);
+    color: var(--on-ink);
+  }
+}
+
+/* ============================================================
+   SIGNAL 1 — REDUZIERTE BEWEGUNG
+   Skill §14: nicht "keine Rueckmeldung", sondern eine sanftere,
+   nicht-vestibulaere Entsprechung. Opacity bleibt, weil sie
+   Verstaendnis traegt. Elastik und Overshoot fallen weg.
+   Die JS-Springs werden zusaetzlich ueber useReducedMotion()
+   in components/motion/springs.ts entschaerft.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ============================================================
+   SIGNAL 2 — REDUZIERTE TRANSPARENZ
+   Skill §14: durchscheinende Flaechen werden fest, Blur faellt weg.
+   ============================================================ */
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    --glass-chrome: var(--ground);
+    --glass-modal: var(--surface);
+  }
+  .glass-chrome,
+  .glass-modal {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border-top-color: var(--line);
+  }
+  /* Ohne Blur braucht die Chrome-Ebene eine echte Kante */
+  .glass-chrome {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+/* ============================================================
+   SIGNAL 3 — HOHER KONTRAST
+   Skill §14: nahezu deckende Flaechen mit definierter,
+   kontrastierender Kante.
+   ============================================================ */
+@media (prefers-contrast: more) {
+  :root {
+    --ink-soft: var(--ink);
+    --line: currentColor;
+    --glass-chrome: var(--ground);
+    --glass-modal: var(--surface);
+  }
+  .glass-chrome,
+  .glass-modal {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid var(--ink);
+  }
+  /* Bei hohem Kontrast bleibt die Kopfleiste immer deckend, auch
+     ueber dem Hero. Skill §14. */
+  header[data-over-hero] .glass-chrome {
+    opacity: 1 !important;
+    background-color: var(--ground) !important;
+  }
+  header[data-over-hero="true"] > div {
+    color: var(--ink) !important;
+  }
+  [data-pressable] {
+    border: 2px solid var(--ink) !important;
+  }
+}

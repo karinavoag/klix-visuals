@@ -1,0 +1,17 @@
+# Netlify-Konfiguration fuer KLIX VISUALS.
+#
+# Next.js wird von Netlify automatisch erkannt, das Plugin
+# @netlify/plugin-nextjs wird beim Build selbst nachgezogen. Deshalb
+# steht hier bewusst nur das Noetigste, alles Weitere wuerde die
+# Automatik nur stoeren.
+#
+# Die beiden Variablen fuer den Mailversand gehoeren NICHT hierher,
+# sondern in die Netlify-Oberflaeche unter Site configuration,
+# Environment variables. Diese Datei landet sonst mit dem API-Key
+# in einem Repository.
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
