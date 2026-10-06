@@ -108,7 +108,7 @@ export const impressum: LegalDoc = {
     ["E-Mail: kontakt@klixvisuals.de"],
 
     { h: "Handelsregister" },
-    "Die Eintragung in das Handelsregister ist beantragt. Registergericht und HRB-Nummer werden an dieser Stelle ergänzt, sobald die Eintragung vollzogen ist.",
+    "Amtsgericht München, HRB 316888",
 
     { h: "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz" },
     "Die Umsatzsteuer-Identifikationsnummer der Gesellschaft ist beantragt und wird an dieser Stelle ergänzt, sobald sie erteilt ist.",
