@@ -27,7 +27,7 @@ export function Work() {
             {/* Bewusst nicht anfassbar: ein Element, das Druck-Feedback
                 gibt und dann nichts tut, ist genau der Fehler aus dem
                 Audit der alten Seite. Skill §16 Familiarity. */}
-            <article className="flex flex-col gap-4">
+            <article className="flex flex-col gap-4 h-full">
               {item.image ? (
                 <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1rem]
                                 shadow-[var(--shadow-card)]">
@@ -40,16 +40,28 @@ export function Work() {
                   />
                 </div>
               ) : (
-                /* Kein erfundener Nachweis. Lieber eine sichtbare Luecke
-                   als ein fremdes Motiv unter einem Kundennamen. */
                 <PlaceholderFrame
                   label="PLATZHALTER: Projektbild fehlt"
                   className="aspect-[4/3] w-full"
                 />
               )}
-              <div className="flex flex-col gap-1">
-                <h3 className="type-h3">{item.client}</h3>
-                <p className="type-small text-ink-soft">{item.discipline}</p>
+              <div className="flex flex-col gap-3 flex-1">
+                <div>
+                  <h3 className="type-h3">{item.client}</h3>
+                  <p className="type-small text-ink-soft">{item.discipline}</p>
+                </div>
+                {item.description && (
+                  <p className="type-small text-ink-dark leading-relaxed">{item.description}</p>
+                )}
+                {item.services && item.services.length > 0 && (
+                  <ul className="flex flex-wrap gap-x-3 gap-y-1 mt-auto">
+                    {item.services.map((service) => (
+                      <li key={service} className="type-micro text-ink-soft">
+                        {service}
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </article>
           </Reveal>
