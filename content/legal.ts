@@ -135,6 +135,7 @@ export const agb: LegalDoc = {
       company.legal,
       "Geschäftsführerin: Karina Voag",
       "Keltenweg 3, 85764 Oberschleißheim",
+      "Amtsgericht München, HRB 316888",
       "Umsatzsteuer-Identifikationsnummer: beantragt",
       "Stand: September 2026",
     ],
