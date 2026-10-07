@@ -69,7 +69,7 @@ export const hero = {
   headline: "Design, das nicht nur gut aussieht. Sondern funktioniert.",
   lead: "Für Unternehmen, die verkaufen wollen. Mit über 6 Jahren E-Commerce, Brand Building und Produktion.",
   primary: "Projekt besprechen",
-  secondary: "Betreuung ansehen",
+  secondary: "Projekte ansehen",
   /* Das Hintergrundfoto der alten Startseite. Dort stand weisser
      Text ohne Abdunklung darauf, der Kontrast war deshalb von der
      Bildstelle abhaengig. Hier liegt ein Scrim mit 62 Prozent
@@ -148,121 +148,49 @@ export const about = {
 
 export const services = [
   {
-    /**
-     * GEAENDERT 22.09.2026, in zwei Schritten auf Karinas Ansage.
-     *
-     * Zuerst: E-Commerce an die erste Stelle, und die Leistung
-     * beschreibt den Bau, nicht mehr das Ueberarbeiten eines
-     * bestehenden Auftritts.
-     *
-     * Dann: aus "Onlineshops und E-Commerce" wird "Online-Auftritt".
-     * Der Shop ist nur der eine Fall. Karina baut ebenso Websites,
-     * bei denen es nicht um Bestellungen geht, sondern um Anfragen.
-     * Unter dem alten Namen konnte ein Hotel oder eine Praxis keine
-     * Website anfragen, genau der Fehler, den Social Media auf der
-     * alten Seite hatte.
-     *
-     * Belegt ist das dreifach. Erstens durch Angebot A-2026-001 an
-     * ORIGINX ueber 7.500 EUR netto: Shopify Konzeption und
-     * Einrichtung, Design und Umsetzung, Start- und Contentseiten,
-     * Produkt- und Conversion-Optimierung, Apps und Funktionen.
-     * Zweitens durch die fuenf Shopify-Stores, die Karina selbst
-     * betreibt. Drittens durch diese Seite hier.
-     *
-     * Dazu die Ausbildung zur Kauffrau im E-Commerce, die in der
-     * Bio steht und diesen Reiter sachlich traegt.
-     *
-     * ZU BEACHTEN beim Bild: `ecommerce-klix-laptop.jpg` zeigt die
-     * alte Webflow-Seite. Sobald der Relaunch live ist, zeigt die
-     * Kachel den ueberholten Stand. Besser waere ein Screenshot
-     * eines echten Shops, siehe HANDOVER.
-     */
-    id: "online",
-    title: "Online-Auftritt",
+    id: "brands-ecommerce",
+    title: "Brands & E-Commerce",
     source: "neu" as const,
-    body: "Für Marken, die online gefunden werden wollen. Website oder Onlineshop, aufgebaut, gestaltet und so eingerichtet, dass aus Besuchern Anfragen und Bestellungen werden.",
-    image: {
-      src: "/mockups/ecommerce-klix-laptop.jpg",
-      alt: "Gestalteter Onlineauftritt auf zwei Laptops, Startseite und Leistungsübersicht, Mockup",
-    },
+    body: "Branding, Packaging und Shopify – das komplette Spektrum für Marken und Online-Unternehmen, die nicht nur gut aussehen, sondern verkaufen wollen.",
+    image: { src: "/mockups/ecommerce-klix-laptop.jpg", alt: "Branding und E-Commerce Design Projekte von KLIX VISUALS" },
     items: [
-      "Websites und Landingpages",
-      "Onlineshops mit Shopify",
-      "Produktseiten und Conversion",
-      "Technische Einrichtung",
-    ],
-  },
-  {
-    id: "branding",
-    title: "Branding & Identity",
-    source: "ueberarbeitet" as const,
-    body: "Für Unternehmen, die einen Auftritt brauchen, den man wiedererkennt. Vom Logo bis zum vollständigen Erscheinungsbild.",
-    /* Mockup von der alten Seite. Illustration der Leistung,
-       ausdruecklich KEIN Projektnachweis: das Bild ist keinem
-       Kunden zugeordnet und wird auch nicht so beschriftet. */
-    image: { src: "/mockups/stationery-box.webp", alt: "Briefpapier, Visitenkarten und Verpackung eines einheitlichen Markenauftritts, Mockup" },
-    items: [
-      "Markenstrategie",
-      "Logo Design",
-      "Visuelle Markenidentität",
-      "Brand Guidelines",
-    ],
-  },
-  {
-    /**
-     * GEAENDERT 22.09.2026 auf Karinas Ansage: "Packaging & Product
-     * Design" und "Print & Editorial Design" sind zu einer Leistung
-     * zusammengefasst.
-     *
-     * Sachlich gehoert es zusammen: beides endet in einer Druckdatei,
-     * beides wird produziert, beides liegt am Ende in der Hand. Die
-     * Trennung zwang Besucher zu einer Entscheidung, die sie nicht
-     * treffen koennen, weil eine Speisekarte und ein Etikett fuer sie
-     * dasselbe Gewerk sind.
-     *
-     * Nebeneffekt auf das Raster: die Leistungen stehen in zwei
-     * Spalten. Mit fuenf Eintraegen blieb der letzte allein in seiner
-     * Reihe, mit vier geht es sauber auf.
-     *
-     * Das Motiv der frueheren Print-Kachel (letter-trifold.webp) wird
-     * dadurch nicht mehr ausgeliefert.
-     */
-    id: "packaging-print",
-    title: "Packaging & Print",
-    source: "ueberarbeitet" as const,
-    body: "Für alles, was produziert wird und am Ende in der Hand liegt. Von der Verpackung, die sich am Regal behaupten muss, bis zur Speisekarte. Konzept, Gestaltung und geprüfte Druckdaten.",
-    image: { src: "/mockups/box-packaging.webp", alt: "Bedruckte Faltschachtel aus einem Verpackungsdesign, Mockup" },
-    items: [
+      "Branding & Logo Design",
       "Verpackungsdesign",
-      "Etikettendesign",
-      "Produktkonzept",
-      "Versandverpackungen",
-      "Speisekarten",
-      "Visitenkarten",
-      "Flyer",
-      "Broschüren",
+      "Shopify & E-Commerce Setup",
+      "Produktseiten & Conversion",
+      "Brand Guidelines",
+      "Digital Assets",
     ],
   },
   {
-    /* neu 22.09.2026. Die groesste Luecke der alten Seite: Social
-       Media macht heute einen grossen Teil der Arbeit aus (Hilton
-       Munich Airport, Kraemmel/OPUS.G, Movida Living), kam aber als
-       Leistung nirgends vor. Wer die Seite las, konnte es nicht
-       anfragen.
-
-       Das Bild lag bereits unter public/mockups/social-hilton.webp
-       und wurde bisher von keiner Seite ausgeliefert. Es ist ein
-       Mockup, also Illustration der Leistung, kein Projektnachweis,
-       und wird auch nicht als solcher beschriftet. */
-    id: "social",
-    title: "Social Media",
+    id: "hospitality",
+    title: "Hospitality & Real Estate",
     source: "neu" as const,
-    body: "Für Marken, die regelmäßig sichtbar bleiben müssen. Posts und Karussells mit Substanz statt Dekoration, dazu die Kommentararbeit, die sonst liegen bleibt.",
-    image: {
-      src: "/mockups/social-hilton.webp",
-      alt: "Social-Media-Beiträge einer Hotelmarke auf einem Smartphone, Mockup",
-    },
-    items: ["Posts und Karussells", "Stories", "Community Management", "Content-Vorlagen"],
+    body: "Branding, Print, Social Media und Kampagnen für Hotels, Restaurants und Immobilienprojekte. Kontinuierliche visuelle Kommunikation über alle Touchpoints.",
+    image: { src: "/mockups/social-hilton.webp", alt: "Hospitality Design für Hotels und Restaurants" },
+    items: [
+      "Branding & Corporate Identity",
+      "Speisekarten & Printmaterialien",
+      "Social Media Design",
+      "Kampagnen & Editorial",
+      "Marketingmaterialien",
+      "Laufende Designunterstützung",
+    ],
+  },
+  {
+    id: "agencies",
+    title: "Agenturen / White Label",
+    source: "neu" as const,
+    body: "Designunterstützung für Marketing- und Kreatimagenturen. Zuverlässige, flexible und vollständig im Hintergrund – unter eurem Namen.",
+    image: { src: "/mockups/stationery-box.webp", alt: "White Label Design Services für Agenturen" },
+    items: [
+      "White-Label Design",
+      "Production Design",
+      "Laufende Designkapazität",
+      "Digital & Print Assets",
+      "Schnelle Abstimmungen",
+      "Langfristige Partnerschaften",
+    ],
   },
 ];
 
@@ -524,10 +452,10 @@ export const sectors = [
  * verhandelt genau dort.
  */
 export const care = {
-  eyebrow: "Betreuung",
-  title: "Laufend betreut statt einzeln beauftragt",
-  lead: "Wenn bei Ihnen regelmäßig Gestaltung anfällt, ist ein Paket schneller und günstiger als einzelne Aufträge. Sie fragen nicht jedes Mal ein Angebot an, ich halte Ihnen feste Zeit frei.",
-  cta: "Betreuung anfragen",
+  eyebrow: "Regelmäßig Design benötigt?",
+  title: "Feste Designkapazität statt Projekt für Projekt",
+  lead: "Für Unternehmen und Agenturen, die kontinuierlich Design benötigen, biete ich feste monatliche Designkapazitäten an. Betreuung ab 690 € / Monat",
+  cta: "Betreuung ansehen",
   packages: [
     {
       id: "basis",
@@ -572,6 +500,36 @@ export const care = {
     "Größere Projekte außerhalb des Pakets bekommen 10 Prozent.",
     "Alle Beträge netto, zuzüglich Umsatzsteuer.",
   ],
+};
+
+export const businessSection = {
+  headline: "Design mit Business-Verständnis.",
+  text: "Ich komme nicht nur aus dem Design, sondern aus dem operativen E-Commerce. Deshalb denke ich bei einer Verpackung an Produktion und Verkauf – und bei einem Shopify Store an Nutzerführung und Conversion statt nur an Optik.",
+  points: [
+    "6+ Jahre E-Commerce-Erfahrung",
+    "Shopify-Erfahrung aus dem operativen Tagesgeschäft",
+    "Design von der Idee bis zur Produktion",
+    "Direkte Zusammenarbeit ohne Agentur-Umwege",
+  ],
+};
+
+export const whiteLabel = {
+  headline: "Dein Designteam im Hintergrund.",
+  text: "White-Label Design Support für Agenturen, die zusätzliche kreative Kapazitäten brauchen – zuverlässig, flexibel und vollständig im Hintergrund.",
+  points: [
+    "direkte Kommunikation",
+    "schnelle Abstimmungen",
+    "bestehende Workflows können übernommen werden",
+    "White Label",
+    "langfristige Zusammenarbeit möglich",
+  ],
+  cta: "White-Label Zusammenarbeit anfragen",
+};
+
+export const closingSection = {
+  headline: "Lass uns etwas entwickeln, das nicht nur gut aussieht.",
+  subheadline: "Erzähl mir kurz von deinem Projekt und ich melde mich persönlich bei dir.",
+  cta: "Projekt besprechen",
 };
 
 export const contact = {
