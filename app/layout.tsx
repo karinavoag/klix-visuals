@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { CookieNotice } from "@/components/CookieNotice";
 
 const SITE = "https://klixvisuals.de";
 
@@ -83,7 +82,6 @@ export default function RootLayout({
     <html lang="de">
       <body>
         {children}
-        <CookieNotice />
       </body>
     </html>
   );
