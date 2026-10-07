@@ -233,24 +233,25 @@ export const work = [
   {
     id: "hilton",
     client: "Hilton Munich Airport",
-    discipline: "Social Media Posts",
+    discipline: "Social Media & Brand Communication",
+    description: "Visuelle Kommunikation und Social-Media-Design für verschiedene Gastronomiekonzepte des Hilton Munich Airport.",
+    services: ["Social Media Design", "Campaign Assets", "Digital Design", "laufende Adaptionen"],
     image: { src: "/projekte/hilton-social-media.webp", alt: "Social-Media-Posts für das Hilton Munich Airport auf einem Smartphone" },
   },
   {
     id: "bambi",
     client: "Bambi Bar",
     discipline: "Full Branding",
+    description: "Vollständige Markenidentität – von Logo bis zum kompletten Designsystem für die neue Bar in München.",
+    services: ["Logo Design", "Brand Guidelines", "Visuelle Identität", "Farbsystem & Typografie"],
     image: { src: "/projekte/bambi-branding.webp", alt: "Branding Guidelines der Bambi Bar mit Logo, Farben und Schriften" },
   },
   {
-    /* Ersetzt "EdoxTec" auf Karinas Wunsch.
-       Bild von Karina geliefert. Achtung bei der Herkunft: die Datei
-       lag als "Kleeberger Mockup (1).png" auf dem Schreibtisch, der
-       Name war irrefuehrend. Inhalt vor dem Einbau geprueft, es ist
-       das Schirmbar-Mockup. */
     id: "schirmbar",
     client: "Schirmbar",
     discipline: "Logo Design & Stempelkarte",
+    description: "Logo-Entwicklung und Design einer Treuekarte für eine Münchner Bar.",
+    services: ["Logo Design", "Stempelkarte", "Markensignatur"],
     image: {
       src: "/projekte/schirmbar-logo-stempelkarte.jpg",
       alt: "Logo und Treuekarte mit zehn Stempelfeldern für die Schirmbar",
@@ -258,32 +259,29 @@ export const work = [
   },
   {
     id: "herzog",
-    client: "Herzog Bar",
-    discipline: "Speisekarte",
+    client: "Herzog Bar & Restaurant",
+    discipline: "Print Design",
+    description: "Designkonzept und Umsetzung für hochwertige Speisekarten, die zum kulinarischen Angebot passen.",
+    services: ["Speisekarten-Design", "Print-Gestaltung", "Produktionsreife Daten"],
     image: { src: "/projekte/herzog-speisekarte.webp", alt: "Aufgeschlagene Speisekarte für das Herzog Bar und Restaurant in München" },
   },
   {
-    /* Ersetzt "Munich in my pocket" auf Karinas Wunsch.
-       Bild von der alten Webflow-Seite uebernommen, dort unter
-       /projekte als "Kleeberger Mockup". Alt-Text praezisiert:
-       auf der alten Seite stand nur "Kleeberger Visitenkarte". */
     id: "charlotte-kleeberger",
     client: "Dr. Charlotte Kleeberger",
     discipline: "Corporate Identity",
+    description: "Geschlossene visuelle Identität mit Visitenkarten, Briefpapier und weiteren Stationery-Elementen.",
+    services: ["Logo Design", "Corporate Design", "Stationery", "Brand System"],
     image: {
       src: "/projekte/charlotte-kleeberger-ci.webp",
       alt: "Visitenkarten aus der Corporate Identity für Dr. Charlotte Kleeberger",
     },
   },
   {
-    /* Ersetzt "House of Huetter" auf Karinas Wunsch.
-       Bild von ihr geliefert, 1536x1024, als JPEG abgelegt.
-       ZU BESTAETIGEN: Der Kundenname stammt vom Etikett
-       ("ALEXANDER RECKNAGEL"). Falls der Auftraggeber anders heisst
-       oder nicht genannt werden soll, ist es diese eine Zeile. */
     id: "wein-produktdesign",
     client: "Alexander Recknagel",
-    discipline: "Weinflaschen Produktdesign",
+    discipline: "Packaging & Product Design",
+    description: "Produktionsfertige Etiketten für Weinflaschen – Design mit Blick auf Regaloptik und E-Commerce.",
+    services: ["Verpackungsdesign", "Etikettengestaltung", "Druckdatenvorbereitung"],
     image: {
       src: "/projekte/wein-produktdesign.jpg",
       alt: "Zwei Riesling-Flaschen mit den Etiketten Kieselfink und Steinling, Weinflaschen-Produktdesign",
