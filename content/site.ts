@@ -65,10 +65,10 @@ export const nav = [
  * planbaren Umsatz traegt und sonst uebersehen wird.
  */
 export const hero = {
-  eyebrow: "Online-Auftritte und Grafikdesign, München",
-  headline: "Websites, Onlineshops und Markenauftritte, die verkaufen.",
-  lead: "Ich baue Websites und Onlineshops und gestalte Branding, Verpackung, Print und Social Media. Für Hotellerie, Immobilien und Handel, direkt oder im White Label für Agenturen. Klare Konzepte, saubere Daten, verlässliche Termine.",
-  primary: "Projekt anfragen",
+  eyebrow: "Branding, Packaging, Shopify & Print",
+  headline: "Design, das nicht nur gut aussieht. Sondern funktioniert.",
+  lead: "Für Unternehmen, die verkaufen wollen. Mit über 6 Jahren E-Commerce, Brand Building und Produktion.",
+  primary: "Projekt besprechen",
   secondary: "Betreuung ansehen",
   /* Das Hintergrundfoto der alten Startseite. Dort stand weisser
      Text ohne Abdunklung darauf, der Kontrast war deshalb von der
@@ -131,18 +131,18 @@ export const about = {
     alt: "Karina Voag, Grafikdesignerin und Gründerin von KLIX VISUALS in München",
   },
   paragraphs: [
-    "Ich bin Karina Voag, Gründerin von KLIX VISUALS. Seit über sechs Jahren arbeite ich im E-Commerce, im Brand Building und im Design. Von München aus baue ich Onlineshops und Websites und gestalte Marken, Verpackungen und Printprodukte.",
-    "Diese Verbindung ist der eigentliche Unterschied. Ich gestalte nicht nur, wie etwas aussieht, sondern weiß aus dem Tagesgeschäft, was ein Produkt am Regal und eine Seite im Shop leisten muss. Fünf Shopify-Stores betreue ich selbst.",
+    "Design mit Business-Verständnis. Ich komme nicht nur aus dem Design, sondern aus dem operativen E-Commerce. Deshalb denke ich bei einer Verpackung an Produktion und Verkauf – und bei einem Shopify Store an Conversion statt nur Optik.",
+    "Seit über sechs Jahren arbeite ich im E-Commerce, im Brand Building und im Design. Fünf Shopify-Stores betreue ich selbst. Von München aus baue ich Onlineshops und Websites und gestalte Marken, Verpackungen und Printprodukte.",
     "Der größte Teil meiner Designarbeit kommt aus Gastronomie und Hotellerie. Speisekarten für das Herzog Bar & Restaurant, Branding Guidelines für die Bambi Bar, Social Media für das Hilton Munich Airport. Dazu Verpackungen, Tech Packs und Kataloge für Handel und Import.",
     "Sie arbeiten dabei direkt mit mir. Es gibt keine Zwischenebene, keinen Wechsel der Ansprechperson und keine Weitergabe an wechselnde Freelancer. Auf Anfragen antworte ich in unter 24 Stunden.",
     "Ein Entwurf ist für mich erst fertig, wenn er produzierbar ist. Sie bekommen geprüfte Druckdaten, sauber sortierte Dateien und Vorlagen, mit denen Ihr Team selbst weiterarbeiten kann.",
     "Für Agenturen arbeite ich im White Label, unter Ihrem Namen und abgestimmt auf Ihre Vorlagen.",
   ],
   facts: [
-    { label: "Erfahrung", value: "über 6 Jahre in E-Commerce, Brand Building und Design" },
-    { label: "Sitz", value: "München" },
+    { label: "E-Commerce & Design", value: "über 6 Jahre operative Erfahrung" },
+    { label: "Shopify Stores", value: "5 in eigener Betreuung" },
     { label: "Antwortzeit", value: "unter 24 Stunden" },
-    { label: "Zusammenarbeit", value: "Direkt und im White Label für Agenturen" },
+    { label: "Arbeitsweise", value: "Direkt, produktionsfertig, White Label" },
   ],
 };
 
