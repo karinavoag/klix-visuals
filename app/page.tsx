@@ -4,6 +4,10 @@ import { Hero } from "@/components/Hero";
 import { StickyCta } from "@/components/StickyCta";
 import { work, services, contact, care, about } from "@/content/site";
 import { Care } from "@/components/Care";
+import { SocialProof } from "@/components/SocialProof";
+import { BusinessSection } from "@/components/BusinessSection";
+import { WhiteLabel } from "@/components/WhiteLabel";
+import { ClosingCTA } from "@/components/ClosingCTA";
 import {
   Work,
   Services,
@@ -131,14 +135,15 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <SocialProof />
         <Work />
+        <BusinessSection />
         <Services />
-        <Sectors />
+        <WhiteLabel />
         <Care />
-        <Process />
         <Testimonials />
-        <Clients />
         <About />
+        <ClosingCTA />
       </main>
       <Footer />
       <StickyCta />
