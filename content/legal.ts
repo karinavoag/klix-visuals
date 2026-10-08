@@ -108,7 +108,7 @@ export const impressum: LegalDoc = {
     ["E-Mail: kontakt@klixvisuals.de"],
 
     { h: "Handelsregister" },
-    "Amtsgericht München, HRB 316888",
+    "Amtsgericht München, HRB 31688",
 
     { h: "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz" },
     "Die Umsatzsteuer-Identifikationsnummer der Gesellschaft ist beantragt und wird an dieser Stelle ergänzt, sobald sie erteilt ist.",
@@ -135,7 +135,7 @@ export const agb: LegalDoc = {
       company.legal,
       "Geschäftsführerin: Karina Voag",
       "Keltenweg 3, 85764 Oberschleißheim",
-      "Amtsgericht München, HRB 316888",
+      "Amtsgericht München, HRB 31688",
       "Umsatzsteuer-Identifikationsnummer: beantragt",
       "Stand: September 2026",
     ],

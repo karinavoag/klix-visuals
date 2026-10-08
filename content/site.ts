@@ -28,13 +28,14 @@ export const PLACEHOLDER = "PLATZHALTER" as const;
  * 22.09.2026. Der Zusatz stand zuvor hier, weil die Eintragung ins
  * Handelsregister noch aussteht (eingereicht am 17.09.2026) und wer
  * vorher als GmbH firmiert, nach § 11 Abs. 2 GmbHG persoenlich haftet.
+ * Stand 08.10.2026: Eintragung ist erfolgt, HRB 31688.
  * Der Punkt wurde zweimal angesprochen, Karina hat ihn abgewogen und
  * sich dagegen entschieden. Es ist ihre Entscheidung, nicht ein
  * Versehen, und soll beim naechsten Durchsehen nicht "korrigiert"
  * werden.
  *
- * NACH DER EINTRAGUNG gehoeren zusaetzlich Registergericht und
- * HRB-Nummer ins Impressum, siehe content/legal.ts.
+ * Registergericht und HRB-Nummer stehen seit der Eintragung im Impressum
+ * und in den AGB, siehe content/legal.ts.
  */
 export const company = {
   /** Vollstaendige Firmierung fuer Footer und Rechtstexte. */
