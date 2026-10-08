@@ -27,7 +27,7 @@ export function SocialProof() {
                   sizes="112px"
                   className="object-contain"
                   style={{
-                    filter: "brightness(0.9) saturate(0.5) hue-rotate(220deg)",
+                    filter: "brightness(1.1) saturate(0.8) hue-rotate(200deg)",
                   }}
                 />
               </div>

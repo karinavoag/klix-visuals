@@ -193,7 +193,7 @@ export function RequestForm({
       <button
         type="submit"
         disabled={!complete || status !== "idle"}
-        className="w-full bg-brand text-white font-semibold py-4 rounded-sm hover:bg-brand-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full bg-brand text-white font-semibold py-4 rounded-sm hover:bg-brand-dark active:bg-brand-darker transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {status === "sending" ? "Wird gesendet…" : "Projekt anfragen"}
       </button>

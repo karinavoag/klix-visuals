@@ -19,7 +19,9 @@ function SectionHead({ eyebrow, title }: { eyebrow: string; title: string }) {
 export function Work() {
   return (
     <section id="arbeiten" className={SECTION}>
-      <SectionHead eyebrow="Arbeiten" title="Ausgewählte Projekte" />
+      <div className="mb-12">
+        <h2 className="type-h2 max-w-[24ch]">Ausgewählte Projekte</h2>
+      </div>
 
       <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {work.map((item, i) => (

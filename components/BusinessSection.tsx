@@ -24,12 +24,12 @@ export function BusinessSection() {
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2">
         {points.map((point, idx) => (
           <Reveal key={idx} delay={0.1 + idx * 0.03}>
-            <div className="flex flex-col gap-2 border-t border-line pt-6">
-              <p className="type-small text-ink-dark leading-relaxed">{point}</p>
-            </div>
+            <article className="flex flex-col gap-3 border-t border-line pt-6 h-full">
+              <p className="type-small text-ink-dark leading-relaxed font-semibold">{point}</p>
+            </article>
           </Reveal>
         ))}
       </div>

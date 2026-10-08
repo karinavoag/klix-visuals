@@ -24,13 +24,12 @@ export function WhiteLabel() {
         </p>
       </Reveal>
 
-      <div className="grid grid-cols-1 gap-x-8 gap-y-4 md:grid-cols-2 mb-10">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2 lg:grid-cols-3 mb-10">
         {points.map((point, idx) => (
           <Reveal key={idx} delay={0.1 + idx * 0.03}>
-            <div className="flex gap-3 items-start">
-              <span className="text-brand font-semibold text-sm mt-1 flex-shrink-0">→</span>
-              <p className="type-small text-ink-dark">{point}</p>
-            </div>
+            <article className="flex flex-col gap-3 border-t border-line pt-6 h-full">
+              <p className="type-small text-ink-dark leading-relaxed font-semibold">{point}</p>
+            </article>
           </Reveal>
         ))}
       </div>
@@ -38,7 +37,7 @@ export function WhiteLabel() {
       <Reveal delay={0.3}>
         <a
           href="#contact"
-          className="inline-block px-8 py-4 bg-brand text-white font-semibold rounded-sm hover:bg-brand-dark transition-colors"
+          className="inline-block px-10 py-4 bg-brand text-white font-semibold rounded-sm hover:bg-brand-dark active:bg-brand-darker transition-all duration-200"
         >
           White-Label Zusammenarbeit anfragen
         </a>
