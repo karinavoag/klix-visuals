@@ -2,8 +2,7 @@ import { SiteShell } from "@/components/SiteShell";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { StickyCta } from "@/components/StickyCta";
-import { work, services, contact, care, about } from "@/content/site";
-import { Care } from "@/components/Care";
+import { work, services, contact, about } from "@/content/site";
 import { SocialProof } from "@/components/SocialProof";
 import { BusinessSection } from "@/components/BusinessSection";
 import { WhiteLabel } from "@/components/WhiteLabel";
@@ -140,7 +139,6 @@ export default function Page() {
         <BusinessSection />
         <Services />
         <WhiteLabel />
-        <Care />
         <Testimonials />
         <About />
         <ClosingCTA />
