@@ -35,7 +35,7 @@ export function StickyCta() {
           exit={springs.reduced ? { opacity: 0 } : { opacity: 0, y: 24 }}
           transition={springs.ui}
           className="glass-chrome fixed inset-x-0 bottom-0 z-30
-                     px-6 pb-[max(1rem,env(safe-area-inset-bottom))] pt-4 md:hidden"
+                     px-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] pt-4 md:hidden"
         >
           <Pressable
             ref={ctaRef}

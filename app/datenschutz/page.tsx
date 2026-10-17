@@ -8,9 +8,9 @@ import { datenschutz } from "@/content/legal";
    eine sachliche Beschreibung und eine eigene Canonical-URL. */
 export const metadata: Metadata = {
   title: "Datenschutz",
-  description: "Wie KLIX VISUALS personenbezogene Daten verarbeitet. Google Analytics mit Einwilligung, keine externen Schriftarten.",
+  description: "Datenschutzerklärung von KLIX VISUALS. Wie personenbezogene Daten verarbeitet werden, Hosting bei Netlify, keine Tracking-Tools.",
   alternates: { canonical: "/datenschutz" },
-  openGraph: { title: "Datenschutz | KLIX VISUALS", description: "Wie KLIX VISUALS personenbezogene Daten verarbeitet. Google Analytics mit Einwilligung, keine externen Schriftarten." },
+  openGraph: { title: "Datenschutz | KLIX VISUALS", description: "Datenschutzerklärung von KLIX VISUALS. Wie personenbezogene Daten verarbeitet werden, Hosting bei Netlify, keine Tracking-Tools." },
 };
 
 export default function Page() {
