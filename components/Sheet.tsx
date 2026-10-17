@@ -70,7 +70,10 @@ export function Sheet({ open, onClose, triggerRef, title, children }: Props) {
     window.addEventListener("keydown", onKey);
 
     const prev = document.body.style.overflow;
+    const prevPosition = document.body.style.position;
     document.body.style.overflow = "hidden";
+    document.body.style.position = "fixed";
+    document.body.style.width = "100%";
 
     const active = document.activeElement as HTMLElement | null;
     panelRef.current?.focus();
@@ -78,6 +81,8 @@ export function Sheet({ open, onClose, triggerRef, title, children }: Props) {
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = prev;
+      document.body.style.position = prevPosition;
+      document.body.style.width = "";
       active?.focus();
     };
   }, [open, onClose]);
