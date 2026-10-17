@@ -114,12 +114,12 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <Clients />
         <Work />
         <Services />
         <Sectors />
         <Process />
         <Testimonials />
-        <Clients />
         <About />
       </main>
       <Footer />

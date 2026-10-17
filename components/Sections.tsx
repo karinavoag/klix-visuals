@@ -189,7 +189,7 @@ export function Clients() {
   return (
     <section className="mx-auto max-w-[72rem] px-6 py-24 md:py-32">
       <Reveal>
-        <p className="type-micro text-ink-soft">Kunden</p>
+        <h2 className="type-h2 text-ink">Über 50 Marken vertrauen auf mich</h2>
       </Reveal>
 
       <Reveal delay={0.04}>
