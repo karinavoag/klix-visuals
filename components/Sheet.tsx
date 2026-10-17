@@ -185,7 +185,8 @@ export function Sheet({ open, onClose, triggerRef, title, children }: Props) {
               aria-hidden
             />
 
-            <div className="relative px-6 pt-8 pb-12 md:px-12 md:pt-12 md:pb-16">
+            <div className="relative px-6 pt-8 pb-12 md:px-12 md:pt-12 md:pb-16
+                           bg-surface md:bg-ground">
               {compact && (
                 <div
                   className="mx-auto mb-6 h-1 w-10 rounded-full bg-ink/20"
