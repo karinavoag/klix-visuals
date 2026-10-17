@@ -71,22 +71,6 @@ const strukturierteDaten = {
           description: leistung.body,
         },
       })),
-      /* Die Betreuungspakete tragen einen Preis, der auch sichtbar
-         auf der Seite steht. Nur deshalb darf er hier stehen.
-         `price` ist netto, das sagt `priceSpecification` ausdruecklich,
-         sonst laese eine Suchmaschine ihn als Endpreis. */
-      ...care.packages.map((paket) => ({
-        "@type": "Offer",
-        name: `Betreuung ${paket.name}`,
-        description: paket.forWhom,
-        priceSpecification: {
-          "@type": "UnitPriceSpecification",
-          price: paket.price.replace(/[^0-9.]/g, "").replace(".", ""),
-          priceCurrency: "EUR",
-          valueAddedTaxIncluded: false,
-          unitText: "MON",
-        },
-      })),
     ],
   },
 };
