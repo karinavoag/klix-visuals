@@ -2,6 +2,7 @@ import { SiteShell } from "@/components/SiteShell";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { StickyCta } from "@/components/StickyCta";
+import { ClosingCta } from "@/components/ClosingCta";
 import { work, services, contact, about } from "@/content/site";
 import {
   Work,
@@ -121,6 +122,7 @@ export default function Page() {
         <Testimonials />
         <Clients />
         <About />
+        <ClosingCta />
       </main>
       <Footer />
       <StickyCta />
