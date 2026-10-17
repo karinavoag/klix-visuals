@@ -127,7 +127,7 @@ export const about = {
      Leistungsbildern und Betreuungskarten. Ein eigener Radius nur
      fuer dieses eine Bild waere ein Sonderfall ohne Grund. */
   portrait: {
-    src: "/brand/karina-voag-portrait.webp",
+    src: "/brand/karina-voag-portrait.png",
     alt: "Karina Voag, Grafikdesignerin und Gründerin von KLIX VISUALS in München",
   },
   paragraphs: [
