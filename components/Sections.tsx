@@ -187,40 +187,49 @@ export function Testimonials() {
 
 export function Clients() {
   return (
-    <section className="mx-auto max-w-[72rem] px-6 py-24 md:py-32">
-      <Reveal>
-        <h2 className="type-h2 text-ink">Über 50 Marken vertrauen auf mich</h2>
-      </Reveal>
+    <section id="kunden" className="mx-auto max-w-[72rem] px-6 py-16 md:py-20">
+      <SectionHead eyebrow="Kunden" title="Über 50+ Marken vertrauen auf mich" />
 
       <Reveal delay={0.04}>
-        <ul className="mt-8 grid grid-cols-2 items-center gap-x-8 gap-y-10
-                       sm:grid-cols-3 lg:grid-cols-5">
-          {clients.map((client) => (
-            <li key={client.name} className="flex h-8 items-center justify-center">
-              {client.logo ? (
-                /* Maske statt <img>: jedes Logo traegt sein Navy fest im
-                   style-Block und waere auf dunklem Grund unsichtbar.
-                   So folgt es currentColor und damit dem Theme. */
-                <span
-                  className="logo-mask h-8 w-full text-ink-soft"
-                  style={{ ["--logo-src" as string]: `url(${client.logo})` }}
-                  role="img"
-                  aria-label={client.name}
-                />
-              ) : (
-                /* Fuer Hilton Munich Airport und Kraemmel liegt kein SVG
-                   vor. Ein fremdes Logo nachzubauen waere eine Marken-
-                   verletzung, ein Platzhalterrahmen mitten in der Wand
-                   waere ein Schaden. Der Schriftzug traegt denselben
-                   Ton wie die Masken daneben und liest sich als
-                   Entscheidung, nicht als Luecke. */
-                <span className="type-small text-center text-ink-soft">
-                  {client.name}
-                </span>
-              )}
-            </li>
-          ))}
-        </ul>
+        <div className="mt-8 overflow-x-auto overflow-y-hidden">
+          <style>{`
+            @keyframes scroll-logos {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .logos-carousel {
+              display: grid;
+              grid-auto-flow: column;
+              grid-template-rows: repeat(2, 1fr);
+              gap: 1.5rem 2.5rem;
+              min-width: 200%;
+              animation: scroll-logos 40s linear infinite;
+              padding: 1rem 0;
+            }
+            .logos-carousel:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+          <ul className="logos-carousel">
+            {/* Doppelte Liste für nahtloses Scrollen */}
+            {[...clients, ...clients].map((client, idx) => (
+              <li key={`${client.name}-${idx}`} className="flex h-8 items-center justify-center whitespace-nowrap">
+                {client.logo ? (
+                  <span
+                    className="logo-mask h-8 w-full text-ink-soft"
+                    style={{ ["--logo-src" as string]: `url(${client.logo})` }}
+                    role="img"
+                    aria-label={client.name}
+                  />
+                ) : (
+                  <span className="type-small text-center text-ink-soft">
+                    {client.name}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
       </Reveal>
     </section>
   );
