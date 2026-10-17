@@ -214,13 +214,13 @@ export function Clients() {
           <ul className="logos-carousel">
             {/* Doppelte Liste für nahtloses Scrollen */}
             {[...clients, ...clients].map((client, idx) => (
-              <li key={`${client.name}-${idx}`} className="flex items-center justify-center whitespace-nowrap" style={{ height: '240px' }}>
+              <li key={`${client.name}-${idx}`} className="flex items-center justify-center whitespace-nowrap" style={{ height: '480px' }}>
                 {client.logo ? (
                   <span
                     className="logo-mask w-full text-ink-soft"
                     style={{
                       ["--logo-src" as string]: `url(${client.logo})`,
-                      height: '240px'
+                      height: '480px'
                     }}
                     role="img"
                     aria-label={client.name}
