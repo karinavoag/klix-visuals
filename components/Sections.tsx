@@ -201,10 +201,11 @@ export function Clients() {
               display: grid;
               grid-auto-flow: column;
               grid-template-rows: repeat(2, 1fr);
-              gap: 2.5rem 4rem;
+              gap: 3rem 5rem;
               min-width: 200%;
               animation: scroll-logos 40s linear infinite;
-              padding: 1rem 0;
+              padding: 2rem 0;
+              align-items: center;
             }
             .logos-carousel:hover {
               animation-play-state: paused;
@@ -213,11 +214,14 @@ export function Clients() {
           <ul className="logos-carousel">
             {/* Doppelte Liste für nahtloses Scrollen */}
             {[...clients, ...clients].map((client, idx) => (
-              <li key={`${client.name}-${idx}`} className="flex h-24 sm:h-28 md:h-32 items-center justify-center whitespace-nowrap">
+              <li key={`${client.name}-${idx}`} className="flex items-center justify-center whitespace-nowrap" style={{ height: '240px' }}>
                 {client.logo ? (
                   <span
-                    className="logo-mask h-24 sm:h-28 md:h-32 w-full text-ink-soft"
-                    style={{ ["--logo-src" as string]: `url(${client.logo})` }}
+                    className="logo-mask w-full text-ink-soft"
+                    style={{
+                      ["--logo-src" as string]: `url(${client.logo})`,
+                      height: '240px'
+                    }}
                     role="img"
                     aria-label={client.name}
                   />
