@@ -127,7 +127,7 @@ export const about = {
      Leistungsbildern und Betreuungskarten. Ein eigener Radius nur
      fuer dieses eine Bild waere ein Sonderfall ohne Grund. */
   portrait: {
-    src: "/brand/karina-voag-portrait.png",
+    src: "/brand/karina-voag-portrait.webp",
     alt: "Karina Voag, Grafikdesignerin und Gründerin von KLIX VISUALS in München",
   },
   paragraphs: [
@@ -577,6 +577,8 @@ export const care = {
 export const contact = {
   /** Real, steht so auch im Impressum. */
   email: "kontakt@klixvisuals.de",
+  /** WhatsApp für Direktnachrichten */
+  whatsapp: "+49176413589069",
   /** Ziel des Formulars. Die Route stellt zu contact.email zu. */
   formEndpoint: "/api/anfrage" as string | null,
   /* Beide Angaben stehen im Anfrage-Sheet ueber den Feldern.
