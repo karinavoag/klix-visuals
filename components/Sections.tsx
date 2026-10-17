@@ -285,16 +285,6 @@ export function About() {
             </dl>
           </Reveal>
 
-          <Reveal delay={(about.paragraphs.length + 1) * 0.03}>
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-full
-                         bg-brand px-8 py-3 text-white transition-opacity
-                         hover:opacity-90 active:opacity-80 mt-4"
-            >
-              Projekt anfragen
-            </a>
-          </Reveal>
         </div>
       </div>
     </section>
