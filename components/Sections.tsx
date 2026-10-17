@@ -188,7 +188,7 @@ export function Testimonials() {
 export function Clients() {
   return (
     <section id="kunden" className="mx-auto max-w-[72rem] px-6 py-12 md:py-16">
-      <SectionHead eyebrow="Kunden" title="Über 50+ Marken vertrauen auf mich" />
+      <SectionHead eyebrow="Kunden" title="Vertrauen von 50+ Marken" />
 
       <Reveal delay={0.04}>
         <div className="mt-6 overflow-x-auto overflow-y-hidden">
@@ -213,10 +213,10 @@ export function Clients() {
           <ul className="logos-carousel">
             {/* Doppelte Liste für nahtloses Scrollen */}
             {[...clients, ...clients].map((client, idx) => (
-              <li key={`${client.name}-${idx}`} className="flex h-12 md:h-14 items-center justify-center whitespace-nowrap">
+              <li key={`${client.name}-${idx}`} className="flex h-24 sm:h-28 md:h-32 items-center justify-center whitespace-nowrap">
                 {client.logo ? (
                   <span
-                    className="logo-mask h-12 md:h-14 w-full text-ink-soft"
+                    className="logo-mask h-24 sm:h-28 md:h-32 w-full text-ink-soft"
                     style={{ ["--logo-src" as string]: `url(${client.logo})` }}
                     role="img"
                     aria-label={client.name}
