@@ -111,7 +111,7 @@ export const impressum: LegalDoc = {
     "Amtsgericht München, HRB 316888",
 
     { h: "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz" },
-    "Die Umsatzsteuer-Identifikationsnummer der Gesellschaft ist beantragt und wird an dieser Stelle ergänzt, sobald sie erteilt ist.",
+    "DE465705259",
 
     { h: "Hinweis gemäß § 36 VSBG (Verbraucherstreitbeilegungsgesetz)" },
     "Ich bin zur Teilnahme an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle weder verpflichtet noch bereit.",
